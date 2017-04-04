@@ -75,6 +75,7 @@ public class FifteenModel implements Boardgame {
                     n = iemp + 1;
                     m = jemp;
                 }
+                1
             }
 
             while (!move(n, m));
