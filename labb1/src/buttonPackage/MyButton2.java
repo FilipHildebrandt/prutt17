@@ -2,8 +2,7 @@ package buttonPackage;
 
 import javax.swing.*;
 import java.awt.*;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
+
 
 /**
  * Leonard Halling, leonardh@kth.se
@@ -11,7 +10,7 @@ import java.awt.event.ActionListener;
  */
 
 
-public class MyButton extends JButton implements ActionListener{
+public class MyButton2 extends JButton {
 
     Color c1, c2;
     String s1, s2;
@@ -19,7 +18,7 @@ public class MyButton extends JButton implements ActionListener{
     static String[] knappnamn = {"Jag", "Du", "Ni", "Vi", "Någon", "Några", "Ingen"};
 
 
-    public MyButton(){
+    public MyButton2(){
 
         String randString1 = knappnamn[(int )(Math.random()*100%knappnamn.length)];
         String randString2 = knappnamn[(int )(Math.random()*100%knappnamn.length)];
@@ -31,14 +30,13 @@ public class MyButton extends JButton implements ActionListener{
         setBackground(c1);
         setBorderPainted(false);
         setOpaque(true);
-        addActionListener(this);
 
 
 
     }
 
 
-    public MyButton(String s1, String s2){
+    public MyButton2(String s1, String s2){
         this();
 
         this.s1 = s1;
@@ -46,7 +44,7 @@ public class MyButton extends JButton implements ActionListener{
         setText(this.s1);
 
     }
-    public MyButton(Color c1, Color c2, String s1, String s2){
+    public MyButton2(Color c1, Color c2, String s1, String s2){
 
         this(s1, s2);
         this.c1 = c1;
@@ -57,13 +55,6 @@ public class MyButton extends JButton implements ActionListener{
     }
 
 
-
-    public void actionPerformed(ActionEvent e) {
-        if (e.getSource().equals(this)){
-            this.toggleState();
-        }
-
-    }
 
     public void toggleState(){
         if (now == "s1"){
