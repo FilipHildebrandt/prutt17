@@ -75,7 +75,6 @@ public class FifteenModel implements Boardgame {
                     n = iemp + 1;
                     m = jemp;
                 }
-                System.out.println(MessageFormat.format("{0} {1}", n, m));
             }
 
             while (!move(n, m));
