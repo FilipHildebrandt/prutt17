@@ -1,3 +1,5 @@
+package buttonPackage;
+
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
@@ -9,13 +11,13 @@ import java.awt.event.ActionListener;
  */
 
 
-public class MyButton extends JButton{
+public class MyButton extends JButton implements ActionListener{
 
     Color c1, c2;
     String s1, s2;
     String now = "s1";
 
-    MyButton(Color c1, Color c2, String s1, String s2){
+    public MyButton(Color c1, Color c2, String s1, String s2){
 //        super("My Button");
 
         this.c1 = c1;
@@ -24,21 +26,29 @@ public class MyButton extends JButton{
         this.s2 = s2;
 
 
-        this.setBackground(c1);
-        this.setText(s1);
+        setBackground(c1);
+        setBorderPainted(false);
+        setText(s1);
         setOpaque(true);
+        addActionListener(this);
+
     }
 
+    public void actionPerformed(ActionEvent e) {
+        if (e.getSource().equals(this)){
+            this.toggleState();
+        }
 
+    }
 
     public void toggleState(){
         if (now == "s1"){
-            this.setBackground(c2);
-            this.setText(s2);
+            setBackground(c2);
+            setText(s2);
             now = "s2";
         }else{
-            this.setBackground(c1);
-            this.setText(s1);
+            setBackground(c1);
+            setText(s1);
             now = "s1";
         }
 

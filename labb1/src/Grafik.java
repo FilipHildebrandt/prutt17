@@ -1,8 +1,7 @@
+import buttonPackage.MyButton;
+
 import javax.swing.*;
-import javax.swing.plaf.metal.MetalLookAndFeel;
 import java.awt.*;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
 import java.awt.FlowLayout;
 
 /**
@@ -11,35 +10,30 @@ import java.awt.FlowLayout;
  */
 
 
-public class Grafik extends JFrame implements ActionListener{
+public class Grafik extends JFrame {
 
-    MyButton btn;
+    MyButton btn1;
+    MyButton btn2;
 
     Grafik(){
-        super("hdsa");
-        JFrame myFrame = new JFrame();
-//        myFrame.setTitle("Labb1");
-        myFrame.setSize(300, 300);
-        myFrame.setVisible(true);
-        myFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        setTitle("Filip Hildebrandt & Leonard Halling");
+        setSize(300, 300);
+        setLayout(new FlowLayout());
+        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        btn1 = new MyButton(Color.green, Color.red, "Run", "Stop");
+        btn2 = new MyButton(Color.pink, Color.gray, "Walk", "Go");
+        add(btn1);
+        add(btn2);
+        setVisible(true);
 
-        myFrame.setLocationRelativeTo(null);
-
-        btn = new MyButton(Color.green, Color.red, "Run", "Stop");
-        btn.addActionListener(this);
-        myFrame.add(btn);
 
     }
 
-    public void actionPerformed(ActionEvent e) {
-        if(e.getSource() == btn){
-            btn.toggleState();
-        }
-    }
 
     public static void main(String[] args) {
 
         Grafik gr = new Grafik();
+
     }
 
 
