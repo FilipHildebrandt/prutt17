@@ -9,6 +9,7 @@ public class FifteenModel implements Boardgame {
     private String[][] status = new String[4][4];
     private int iemp = 3;
     private int jemp = 3;
+    StringBuilder sb;
 
     @Override
     public boolean move(int i, int j) {
@@ -21,10 +22,14 @@ public class FifteenModel implements Boardgame {
             return false;
         }
         status[iemp][jemp] = status[i][j];
-        status[i][j] = "*";
+        status[i][j] = " ";
         iemp = i;
         jemp = j;
-        currentMessage = "Great one!";
+        sb = new StringBuilder();
+        sb.append("Pressed ");
+        sb.append(i + " ");
+        sb.append(j);
+        currentMessage = sb.toString();
         return true;
 
     }
