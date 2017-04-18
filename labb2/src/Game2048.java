@@ -44,7 +44,7 @@ public class Game2048 implements Boardgame{
         return true;
     }
 
-    public boolean moveUp(){
+    private boolean moveUp(){
         boolean movedTiles = false;
         for (int col = 0; col < 4; col++) {
             for (int row = 1; row < 4; row++) {
@@ -78,7 +78,7 @@ public class Game2048 implements Boardgame{
     }
 
 
-    public boolean moveDown(){
+    private boolean moveDown(){
         boolean movedTiles = false;
         for (int col = 0; col < 4; col++) {
             for (int row = 2; row >= 0; row--) {
@@ -110,7 +110,7 @@ public class Game2048 implements Boardgame{
         return movedTiles;
     }
 
-    public boolean moveRight(){
+    private boolean moveRight(){
         boolean movedTiles = false;
         for (int row = 0; row < 4; row++) {
             for (int col = 2; col >= 0; col--) {
@@ -142,7 +142,7 @@ public class Game2048 implements Boardgame{
         return movedTiles;
     }
 
-    public boolean moveLeft(){
+    private boolean moveLeft(){
         boolean movedTiles = false;
         for (int row = 0; row < 4; row++) {
             for (int col = 1; col < 4; col++) {
