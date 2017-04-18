@@ -81,8 +81,8 @@ class ViewControl extends JFrame implements ActionListener {
 
 
     public static void main(String[] args) {
-        Boardgame fm = new FifteenModel();
-//        Boardgame fm = new MockGame();
+//        Boardgame fm = new FifteenModel();
+        Boardgame fm = new MockGame();
 //        Boardgame fm = new Game2048();
         ViewControl vc = new ViewControl(fm, 4);
 
