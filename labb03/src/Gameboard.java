@@ -38,6 +38,8 @@ class Gameboard extends JPanel {
 
 	for (int i = 0; i<3; i++){
 	    buttons[i] = new JButton(icons[i]);
+	    buttons[i].setOpaque(true);
+	    buttons[i].setBorderPainted(false);
 	    buttons[i].setActionCommand(texts[i]);
 	    add(buttons[i]);
 	    // Store each button in a map with its text as key. 
@@ -52,6 +54,7 @@ class Gameboard extends JPanel {
 
 
     // Contructor for players board, puts listener on buttons
+
     Gameboard(String name, ActionListener listener) {
 	this(name); // call other constructor to build the board
 	for (int i = 0; i<3; i++)
