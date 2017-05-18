@@ -8,8 +8,7 @@ abstract public class Component {
     String name;
     int weight;
 
-    Component(){
-    }
+
 
     Component(String name, int weight){
         this.name = name;
@@ -19,4 +18,5 @@ abstract public class Component {
     public abstract int getWeight();
 
     public abstract String toString();
+
 }

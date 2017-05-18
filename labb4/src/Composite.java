@@ -1,11 +1,12 @@
 import java.util.ArrayList;
+import java.util.Iterator;
 
 /**
  * Created by Leonard Halling & Filip Hildebrandt on 2017-05-12.
  */
 
 
-public class Composite extends Component{
+public class Composite extends Component implements Iterable{
 
     ArrayList<Component> children;
 
@@ -46,5 +47,10 @@ public class Composite extends Component{
             total += " " + getChild(i).toString();
         }
         return total;
+    }
+
+    @Override
+    public BreadthFirst iterator() {
+        return new BreadthFirst(this);
     }
 }

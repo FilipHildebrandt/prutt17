@@ -15,7 +15,6 @@ public class Main {
         System.out.println(magnus);
 
 
-        // Human h = new Human(){};
         // Human hej = new Man("dsad", "dsada");
         // Human h = new Human(){};
     }

@@ -3,7 +3,7 @@ package Human;
 /**
  * Created by Leonard on 2017-05-12.
  */
-public class Man extends Human{
+class Man extends Human{
 
     String name;
     String pnr;

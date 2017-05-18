@@ -1,3 +1,5 @@
+import java.util.Iterator;
+
 /**
  * Created by Leonard Halling & Filip Hildebrandt on 2017-05-12.
  */
@@ -43,5 +45,17 @@ public class Main {
         // Print again
         System.out.println("Weight: " + suitCase.getWeight());
         System.out.println("Stuff in " + suitCase);
+
+
+//        System.out.println("-----------------------");
+//
+//        BreadthFirst i = suitCase.iterator();
+//        Component item = i.First();
+//
+//        System.out.println("Iterating over suitcase:");
+//        while (item != null){
+//            System.out.println(item);
+//            item = i.next();
+//        }
     }
 }
